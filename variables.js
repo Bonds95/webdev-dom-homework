@@ -1,0 +1,5 @@
+export const commentsContainer = document.getElementById('comments')
+export const addFormButton = document.getElementById('add-form-button')
+export const addFormName = document.getElementById('add-form-name')
+export const addFormText = document.getElementById('add-form-text')
+export const commentsLoader = document.querySelector('.comments-loader')
