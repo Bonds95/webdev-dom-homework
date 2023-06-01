@@ -21,7 +21,7 @@ function getApiFunction() {
             }
         })
         .then((responseData) => {
-            const appComents = responseData.comments.map((comment) => {
+            let appComments = responseData.comments.map((comment) => {
                 return {
                     name: comment.author.name,
                     date: comment.date,
@@ -30,13 +30,14 @@ function getApiFunction() {
                     isLiked: false,
                 }
             })
-            comments = appComents
+            comments = appComments
             renderComments()
         })
         .then(() => {
             commentsLoader.innerHTML = ""
         })
-        .catch(() => {
+        .catch((error) => {
+            console.log(error)
             commentsLoader.innerHTML = 'Проблемы с сервером или отсутствует интернет соединение, попробуйте перезагрузить страницу'
         })
 }
