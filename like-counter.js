@@ -1,4 +1,5 @@
-import { comments } from "./comments-container.js";
+import { comments } from "./api.js";
+import { renderComments } from "./render-function.js";
 
 export const initLikeButtons = () => {
     const likeButtonElements = document.querySelectorAll('.like-button')

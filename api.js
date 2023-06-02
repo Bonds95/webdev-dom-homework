@@ -6,7 +6,7 @@
 import { renderComments } from "./render-function.js";
 import { commentsContainer, addFormButton, addFormName, addFormText, commentsLoader } from "./variables.js";
 
-
+let comments = []
 function getApiFunction() {
     // const commentsLoader = document.querySelector('.comments-loader')
     return fetch('https://webdev-hw-api.vercel.app/api/v1/sergey-bondarenko/comments', {
@@ -87,4 +87,4 @@ function postApiFunction() {
             }
         })
 }
-export {getApiFunction, postApiFunction}
+export {getApiFunction, postApiFunction, comments}

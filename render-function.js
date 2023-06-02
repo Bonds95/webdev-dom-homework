@@ -1,10 +1,10 @@
 
 import { commentsContainer} from "./variables.js";
-import { comments } from "./comments-container.js";
+// import { comments } from "./comments-container.js";
 import { editCommentText } from "./edit-comments.js";
 import { initLikeButtons } from "./like-counter.js";
 import { getDate } from "./date-format.js";
-
+import { comments } from "./api.js";
 
 export const renderComments = () => {
     const commentsHtml = comments.map((comment, index) => {

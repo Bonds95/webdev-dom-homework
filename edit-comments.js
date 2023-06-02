@@ -1,5 +1,5 @@
-import { comments } from "./comments-container.js";
-
+import { comments } from "./api.js";
+import { addFormText } from "./variables.js";
 
 export const editCommentText = () => {
     const commentElements = document.querySelectorAll('.comment')
