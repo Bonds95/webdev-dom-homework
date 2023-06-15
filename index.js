@@ -3,6 +3,7 @@
 import { getApi, postApi } from "./api.js";
 import { renderLoginComponent } from "./login-component.js";
 import { getDate } from "./date.js";
+import { format } from "date-fns";
 // Код писать здесь
 
 
@@ -102,6 +103,7 @@ const renderApp = () => {
     const appEl = document.getElementById('app')
 
     const commentsHtml = comments.map((comment, index) => {
+        const createDate = format(new Date(comment.created_at), 'dd/MM/yyyy hh:mm')
         return `
         <li class="comment" data-index="${index}">
       <div class="comment-header">
@@ -111,7 +113,7 @@ const renderApp = () => {
                 .replaceAll(">", "&gt;")
                 .replaceAll('"', "&quot;")}</div>
         <div>
-          ${getDate(comment.date)}
+          ${createDate}
           </div>
       </div>
       <div class="comment-body">
