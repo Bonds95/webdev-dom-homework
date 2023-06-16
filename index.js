@@ -32,7 +32,8 @@ function getApiFunction() {
         .then(() => {
             // commentsLoader.innerHTML = ""
         })
-        .catch(() => {
+        .catch((error) => {
+            console.log(error);
             // commentsLoader.innerHTML = 'Проблемы с сервером или отсутствует интернет соединение, попробуйте перезагрузить страницу'
         })
 }
@@ -103,7 +104,7 @@ const renderApp = () => {
     const appEl = document.getElementById('app')
 
     const commentsHtml = comments.map((comment, index) => {
-        const createDate = format(new Date(comment.created_at), 'dd/MM/yyyy hh:mm')
+        const createDate = format(new Date(comment.date), 'yyyy/MM/dd hh:mm')
         return `
         <li class="comment" data-index="${index}">
       <div class="comment-header">
