@@ -98,6 +98,7 @@ const initLikeButtons = () => {
         })
     }
 }
+
 initLikeButtons()
 
 const renderApp = () => {
