@@ -100,7 +100,6 @@ const initLikeButtons = () => {
 }
 initLikeButtons()
 
-
 const renderApp = () => {
     const appEl = document.getElementById('app')
 
