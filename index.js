@@ -85,6 +85,7 @@ const editCommentText = () => {
 }
 editCommentText()
 
+
 const initLikeButtons = () => {
     const likeButtonElements = document.querySelectorAll('.like-button')
     const likeCountElements = document.querySelectorAll('.likes-counter')
